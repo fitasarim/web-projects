@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sing-up/in-responsive-form-Css-js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+
+            <div class="user singinbox">
+                <div class="imgbox"><img src="images/key-1.jpg" alt=""></div>
+                <div class="formbox">
+                    <form action="">
+                        <h2>Giriş yap</h2>
+                        <input type="text" placeholder="Kullanıcı adı">
+                        <input type="password" placeholder="Parola">
+                        <input type="submit" value="Giriş">
+                        <p class="singup">Bir hesabın yok mu?<a href="#" onclick="toggleForm();">Üye ol</a></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="user singupbox">
+                
+                <div class="formbox">
+                    <form action="">
+                        <h2>Bir hesap oluşturun</h2>
+                        <input type="text" placeholder="Kullanıcı adı">
+                        <input type="email" placeholder="email adresi">
+                        <input type="password" placeholder="Parola oluştur">
+                        <input type="password" placeholder="Parolayı onayla">
+                        <input type="submit" value="Kaydol">
+                        <p class="singup">Bir hesabın var mı?<a href="#" onclick="toggleForm();">Giriş yap</a></p>
+                    </form>
+                </div>
+                <div class="imgbox"><img src="images/Door.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleForm(){
+            section = document.querySelector('section');
+            container = document.querySelector('.container');
+            container.classList.toggle('active');
+            section.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

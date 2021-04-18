@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text animate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <p class="text">
+            Tutunamayanlar, Türk edebiyatının en önemli eserlerinden biridir. Berna Moran, Oğuz Atay'ın bu ilk romanını "hem söyledikleri hem de söyleyiş biçimiyle bir başkaldırı" olarak niteler. Moran'a göre "Oğuz Atay'ın mizah gücü ve duyarlığı ve kullandığı teknik incelikler, Tutunamayanlar'ı büyük bir yeteneğin ürünü yapmış, eserdeki bu yetkinlik Türk romanını çağdaş roman anlayışıyla aynı hizaya getirmiş ve ona çok şey kazandırmıştır. "Küçük burjuva dünyasını ve değerlerini zekice alaya alan Atay, "saldırısı tutunanların anlamayacağı, rededeceği türden bir romanla yazar."
+        </p>
+
+        <script src="anime.min.js"></script>
+        <script>
+            const text = document.querySelector('.text');
+            text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+            const animation = anime.timeline({
+                targets : '.text span',
+                easing : 'easeInOutExpo',
+                loop : true,
+
+            });
+            animation
+            .add({
+                rotate : function(){
+                    return anime.random(-360,360)
+                },
+                translateX : function(){
+                    return anime.random(-500,500)
+                },
+                translateY : function(){
+                    return anime.random(-500,500)
+                },
+                duration : 5000,
+                delay : anime.stagger(40),
+            })
+
+            
+            .add({
+                rotate : 0,
+                translateX : 0,
+                translateY : 0,
+                duration : 5000,
+                delay : anime.stagger(20),
+            })
+        </script>
+
+    </section>
+</body>
+</html>

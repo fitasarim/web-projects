@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-HTML-Css-Js-Navbar-</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="" class="logo">Logo</a>
+        <div id="toggle"></div>
+        <div id="menu">
+            <ul>
+                <li><a href="#home">Anasayfa</a></li>
+                <li><a href="#about">Hakkında</a></li>
+                <li><a href="#services">Hizmetler</a></li>
+                <li><a href="#source">Kaynaklar</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="home">Anasayfa</section>
+    <section id="about">Hakkında</section>
+    <section id="services">Hizmetler</section>
+    <section id="source">Kaynaklar</section>
+    <section id="galeri">Galeri</section>
+    <section id="contact">İletişim</section>
+
+    <script>
+        const header = document.getElementById('header');
+        const toggle = document.getElementById('toggle');
+        const menu = document.getElementById('menu');
+
+        document.onclick = function(e){
+            if(e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'menu'){
+            toggle.classList.remove('active');
+            menu.classList.remove('active');
+            }
+        }
+
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(236, 53, 53);
+}
+.container
+{
+    position: relative;
+}
+.container .menu
+{
+    position: relative;
+    width: 80px;
+    height: 420px;
+    background: rgb(245, 255, 247);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.7s;
+}
+.container .menu.active
+{
+    width: 300px;
+}
+.container .menu ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.container .menu ul li
+{
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+.container .menu ul li:hover
+{
+    background: beige;
+}
+.container .menu ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.911);
+    font-weight: 500;
+}
+.container .menu ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 80px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.container .menu ul li a .icon .fa
+{
+    font-size: 24px;
+}
+.container .menu ul li a .title
+{
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.toogle
+{
+    position: absolute;
+    right: -20px;
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    background: rgb(213, 253, 219);
+    cursor: pointer;
+    border: 5px solid rgb(236, 53, 53);
+    border-radius: 50%;
+}
+.toogle::before
+{
+    content: '\f138';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: brown;
+}
+.toogle.active::before
+{
+    content: '\f137';
+}

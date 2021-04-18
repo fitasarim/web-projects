@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(49, 204, 251);
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(251, 220, 45, 0.917);
+}
+.container
+{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+}
+.container .iletisiminfo
+{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: rgb(49, 204, 251);
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+}
+.container .iletisiminfo h2
+{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+.container .iletisiminfo ul.info
+{
+    position: relative;
+    margin: 20px 0;
+}
+.container .iletisiminfo ul.info li
+{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+.container .iletisiminfo ul.info li span:nth-child(1)
+{
+    width: 30px;
+    min-width: 30px;
+}
+.container .iletisiminfo ul.info li span:nth-child(1) img
+{
+    max-width: 100%;
+    filter: invert(1);
+}
+.container .iletisiminfo ul.info li span:nth-child(2)
+{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+.container .iletisiminfo ul.sci
+{
+    position: relative;
+    display: flex;
+}
+.container .iletisiminfo ul.sci li
+{
+    list-style: none;
+    margin-right: 15px;
+}
+.container .iletisiminfo ul.sci li a
+{
+    text-decoration: none;
+}
+.container .iletisiminfo ul.sci li a img
+{
+    filter: invert(1);
+}
+
+
+
+
+.container .iletisimform
+{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+.container .iletisimform h2
+{
+    color: rgb(49, 204, 251);
+    font-size: 24px;
+    font-weight: 500;
+}
+.container .iletisimform .formbox
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.container .iletisimform .formbox .inputbox
+{
+    position: relative;
+    margin-bottom: 35px;
+}
+.container .iletisimform .formbox .inputbox.w50
+{
+    width: 47%;
+}
+.container .iletisimform .formbox .inputbox.w100
+{
+    width: 100%;
+}
+.container .iletisimform .formbox .inputbox input,
+.container .iletisimform .formbox .inputbox textarea
+{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #222;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #222;
+}
+.container .iletisimform .formbox .inputbox textarea
+{
+    height: 120px;
+}
+.container .iletisimform .formbox .inputbox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.container .iletisimform .formbox .inputbox input:focus ~ span,
+.container .iletisimform .formbox .inputbox input:valid ~ span,
+.container .iletisimform .formbox .inputbox textarea:focus ~ span,
+.container .iletisimform .formbox .inputbox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(49, 204, 251);
+    font-weight: 500;
+}
+.container .iletisimform .formbox .inputbox input[type="submit"]
+{
+    position: relative;
+    cursor: pointer;
+    background: rgb(49, 204, 251);
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+.container .iletisimform .formbox .inputbox input[type="submit"]:hover
+{
+    background: rgb(49, 234, 251);
+}
+/* responsive */
+@media (max-width : 1200px)
+{
+    .container
+    {
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+    .container .iletisiminfo
+    {
+    top: 0;
+    height: 550px;
+    position: relative;
+    box-shadow: none;
+    }
+    .container .iletisimform
+    {
+    position: relative;
+    width: calc(100% - 350px);
+    padding-left: 0px;
+    margin-left: 0px;
+    padding: 40px;
+    height: 550px;
+    box-shadow: none;
+    }
+}
+@media (max-width : 991px)
+{
+    section
+    {
+    background: rgba(251, 220, 45, 0.917);
+    }
+    section::before
+    {
+        display: none;
+    }
+    .container
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container .iletisimform
+    {
+        width: 100%;
+        height: auto;
+    }
+    .container .iletisiminfo
+    {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+    }
+    .container .iletisiminfo ul.sci
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width : 600px)
+{
+    .container .iletisimform
+    {
+        padding: 25px;
+    }
+    .container .iletisiminfo
+    {
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container .iletisiminfo ul.sci
+    {
+        margin-top: 40px;
+    }
+    .container .iletisimform .formbox .inputbox.w50
+    {
+        width: 100%;
+    }
+}
