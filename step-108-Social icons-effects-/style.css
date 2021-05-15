@@ -1,0 +1,126 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: #252525;
+}
+ul
+{
+    display: flex;
+}
+ul li
+{
+    position: relative;
+    display: block;
+    font-size: 2em;
+    height: 60px;
+    width: 60px;
+    background: #161515;
+    color: #666;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+ul li::before
+{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: #504f4e;
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+    transform: scale(0.8);
+    z-index: -1;
+    transition: 0.5s;
+}
+ul li:nth-child(1)::before
+{
+    background: #f01906;
+}
+ul li:nth-child(2)::before
+{
+    background: #9705f8;
+}
+ul li:nth-child(3)::before
+{
+    background: #8f8f8f;
+}
+ul li:nth-child(4)::before
+{
+    background: #dc06f0;
+}
+ul li:nth-child(5)::before
+{
+    background: #0998f6;
+}
+
+ul li:hover::before
+{
+    filter: blur(3px);
+    transform: scale(1.2);
+}
+
+ul li:nth-child(1):hover:before
+{
+    box-shadow: 0 0 15px #f01906;
+}
+ul li:nth-child(2):hover:before
+{
+    box-shadow: 0 0 15px #9705f8;
+}
+ul li:nth-child(3):hover:before
+{
+    box-shadow: 0 0 15px #8f8f8f;
+}
+ul li:nth-child(4):hover:before
+{
+    box-shadow: 0 0 15px #dc06f0;
+}
+ul li:nth-child(5):hover:before
+{
+    box-shadow: 0 0 15px #0998f6;
+}
+
+ul li:nth-child(1):hover
+{
+    color: #ab4545;
+    box-shadow: 0 0 15px #f22f1d;
+    text-shadow: #f22f1d;
+}
+ul li:nth-child(2):hover
+{
+    color: #9345ab;
+    box-shadow: 0 0 15px #c01df2;
+    text-shadow: #c01df2;
+}
+ul li:nth-child(3):hover
+{
+    color: #958888;
+    box-shadow: 0 0 15px #f0d2d0;
+    text-shadow: #f0d2d0;
+}
+ul li:nth-child(4):hover
+{
+    color: #a845ab;
+    box-shadow: 0 0 15px #f21de0;
+    text-shadow: #f21de0;
+}
+ul li:nth-child(5):hover
+{
+    color: #45a8ab;
+    box-shadow: 0 0 15px #1d9df2;
+    text-shadow: #1d9df2;
+}
